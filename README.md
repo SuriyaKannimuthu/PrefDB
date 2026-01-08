@@ -109,7 +109,7 @@ var data = query.GET_OBJECT<PlayerData>();
 ```PrefDatabase.Clear();```
 ⚠️ This permanently deletes all PrefDB‑registered PlayerPrefs keys.
 
-### 🛠 Unity Editor Window
+## 🛠 Unity Editor Window
 
 PrefDB ships with a built‑in editor tool.
 
