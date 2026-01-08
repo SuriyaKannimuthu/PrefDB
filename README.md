@@ -23,6 +23,10 @@ PrefDB is a lightweight, SQL‑like abstraction layer built on top of Unity Play
 - Column → Property name (e.g., score, coins, settings)
 
 Single‑row tables are also supported using an internal (single) row.
+## Installation
+- Copy https://github.com/SuriyaKannimuthu/PrefDB.git
+- In Unity - go to ```Window > Package Manager > Install package from git URL```
+- Past the URL and Install
 
 ## 🔍 Querying Data
 
@@ -120,7 +124,3 @@ Tools → Pref Database Editor
 - Clear entire tables
 - Clear all PlayerPrefs (with confirmation)
 - This tool is Editor‑only and does not affect runtime builds.
-
-
-#####  PrefDB – Making PlayerPrefs Structured & Maintainable
-
