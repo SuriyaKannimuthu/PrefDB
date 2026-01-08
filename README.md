@@ -121,9 +121,6 @@ Tools → Pref Database Editor
 - Clear all PlayerPrefs (with confirmation)
 - This tool is Editor‑only and does not affect runtime builds.
 
-## 📜 License
-
-MIT License 
 
 #####  PrefDB – Making PlayerPrefs Structured & Maintainable
 
