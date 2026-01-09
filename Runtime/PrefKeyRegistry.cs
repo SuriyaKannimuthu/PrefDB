@@ -5,14 +5,14 @@ using UnityEngine;
 namespace PrefDB
 {
     /// <summary>
-    /// Internal registry for tracking all PlayerPrefs keys managed by the PrefDB system.
+    /// public registry for tracking all PlayerPrefs keys managed by the PrefDB system.
     /// Provides key lifecycle management and ensures proper cleanup of PrefDB data.
     /// </summary>
     /// <remarks>
     /// This class maintains a special registry key in PlayerPrefs that stores a list of all
     /// keys created by the PrefDB system, enabling bulk operations and proper cleanup.
     /// </remarks>
-    internal static class PrefKeyRegistry
+    public static class PrefKeyRegistry
     {
         #region CONSTANTS
         
@@ -36,7 +36,7 @@ namespace PrefDB
         /// Adds the key to the registry if it doesn't already exist and saves the updated registry.
         /// This method is called automatically whenever a SET operation is performed through PrefQuery.
         /// </remarks>
-        internal static void Register(string key)
+        public static void Register(string key)
         {
             var keys = GetAllKeys();
             if (keys.Add(key))
@@ -51,7 +51,7 @@ namespace PrefDB
         /// Removes the key from the registry and saves the updated registry.
         /// This method is called automatically when a DELETE operation is performed through PrefQuery.
         /// </remarks>
-        internal static void UnregisterKey(string key)
+        public static void UnregisterKey(string key)
         {
             var keys = GetAllKeys();
             if (keys.Remove(key))
@@ -67,7 +67,7 @@ namespace PrefDB
         /// <remarks>
         /// Returns an empty HashSet if no keys are registered or if the registry key doesn't exist.
         /// </remarks>
-        internal static HashSet<string> GetAllKeys()
+        public static HashSet<string> GetAllKeys()
         {
             string json = PlayerPrefs.GetString(RegistryKey, "");
             if (string.IsNullOrEmpty(json))
@@ -87,7 +87,7 @@ namespace PrefDB
         /// This provides a complete cleanup of all data managed by the PrefDB system.
         /// Warning: This operation cannot be undone.
         /// </remarks>
-        internal static void ClearAll()
+        public static void ClearAll()
         {
             HashSet<string> keys = GetAllKeys();
 
@@ -107,7 +107,7 @@ namespace PrefDB
         /// <param name="keys">The HashSet of keys to save to the registry.</param>
         /// <remarks>
         /// Serializes the keys as JSON and stores them in the special registry key.
-        /// This method is called internally whenever the registry is modified.
+        /// This method is called publicly whenever the registry is modified.
         /// </remarks>
         private static void Save(HashSet<string> keys)
         {
@@ -122,7 +122,7 @@ namespace PrefDB
         /// Serializable wrapper class for storing a list of keys in JSON format.
         /// </summary>
         /// <remarks>
-        /// Used internally by Unity's JsonUtility to serialize/deserialize the key registry.
+        /// Used publicly by Unity's JsonUtility to serialize/deserialize the key registry.
         /// JsonUtility cannot directly serialize HashSet or List, so this wrapper is necessary.
         /// </remarks>
         [Serializable]
@@ -131,7 +131,7 @@ namespace PrefDB
             /// <summary>
             /// The list of keys stored in the registry.
             /// </summary>
-            internal List<string> Keys;
+            public List<string> Keys;
         }
         
         #endregion
