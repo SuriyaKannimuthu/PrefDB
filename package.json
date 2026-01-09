@@ -1,6 +1,6 @@
 {
     "name": "prefdb",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "displayName": "PrefDB",
     "description": "PrefDB is a lightweight, SQL‑like abstraction layer built on top of Unity PlayerPrefs. It provides a table → row → column data model, fluent query APIs, and a dedicated Unity Editor window to inspect and manage saved data. The goal of PrefDB is to make PlayerPrefs structured, readable, debuggable, and scalable for game data.",
     "documentationUrl": "https://github.com/SuriyaKannimuthu/PrefDB/blob/main/README.md",
