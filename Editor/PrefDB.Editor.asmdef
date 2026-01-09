@@ -1,0 +1,16 @@
+{
+    "name": "PrefDB.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:72505c068f3ce461e89a0bb70e3d60ad"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
