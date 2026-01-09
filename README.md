@@ -23,6 +23,10 @@ PrefDB is a lightweight, SQL‑like abstraction layer built on top of Unity Play
 - Column → Property name (e.g., score, coins, settings)
 
 Single‑row tables are also supported using an internal (single) row.
+## Installation
+- Copy https://github.com/SuriyaKannimuthu/PrefDB.git
+- In Unity - go to ```Window > Package Manager > Install package from git URL```
+- Past the URL and Install
 
 ## 🔍 Querying Data
 
@@ -105,7 +109,7 @@ var data = query.GET_OBJECT<PlayerData>();
 ```PrefDatabase.Clear();```
 ⚠️ This permanently deletes all PrefDB‑registered PlayerPrefs keys.
 
-### 🛠 Unity Editor Window
+## 🛠 Unity Editor Window
 
 PrefDB ships with a built‑in editor tool.
 
@@ -121,6 +125,27 @@ Tools → Pref Database Editor
 - Clear all PlayerPrefs (with confirmation)
 - This tool is Editor‑only and does not affect runtime builds.
 
+## License
 
-#####  PrefDB – Making PlayerPrefs Structured & Maintainable
+MIT License
+
+Copyright (c) 2026 Suriya K
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
