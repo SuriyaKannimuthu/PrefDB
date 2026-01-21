@@ -44,7 +44,7 @@ settings.SELECT("MusicEnabled").SET_BOOL(true);
 bool enabled = settings.SELECT("MusicEnabled").GET_BOOL();
 ```
 
-### 🧱 Supported Data Types
+## 🧱 Supported Data Types
 
 ##### Primitive Types
 
